@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+:root {
+  /* Apple Notes warm off-white palette */
+  --background: 93.2 0.02 85; /* #F6F1E8 warm off-white */
+  --foreground: 25 0.04 20; /* near-black text */
+  --card: 98 0.01 90; /* white-ish note cards */
+  --card-foreground: 25 0.04 20;
+  --popover: 98 0.01 90;
+  --popover-foreground: 25 0.04 20;
+  --primary: 25 0.04 20;
+  --primary-foreground: 98 0.01 90;
+  --secondary: 88 0.02 80;
+  --secondary-foreground: 40 0.05 30;
+  --muted: 88 0.02 80;
+  --muted-foreground: 60 0.04 50;
+  --accent: 85 0.06 90; /* subtle yellow highlight */
+  --accent-foreground: 25 0.04 20;
+  --destructive: 30 0.18 30;
+  --destructive-foreground: 98 0 90;
+  --border: 85 0.02 75;
+  --input: 85 0.02 75;
+  --ring: 60 0.06 60;
+  --radius: 0.625rem;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Figtree",
+    sans-serif;
+  background-color: oklch(var(--background));
+  color: oklch(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* iOS-style momentum scrolling */
+.notes-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
